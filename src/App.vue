@@ -4,21 +4,19 @@
       <img src="https://cdn4.iconfinder.com/data/icons/planner-color/64/popcorn-movie-time-512.png" alt="">
     </div>
     <div class="row">
-      <Familiar/>
-      <Comedia/>
+      <MovieList title='Peliculas Familiares' genre= 'Family' />
+      <MovieList title='Peliculas Comedia' genre= 'Comedy' />
     </div>  
   </div>
 </template>
 
 <script>
-import Comedia from './components/Comedia.vue'
-import Familiar from './components/Familiar.vue'
+import MovieList from './components/MovieList.vue'
 
 export default {
   name: 'App',
   components: {
-    Comedia,
-    Familiar
+    MovieList
   }
 }
 </script>

@@ -15,9 +15,21 @@ const store = new Vuex.Store({
       { id: 2, title: 'Superbad', genre: 'Comedy' },
       { id: 3, title: 'Home Alone', genre: 'Comedy' },
       { id: 4, title: 'Shrek', genre: 'Family' },
-      { id: 4, title: 'The Lion King', genre: 'Family' },
-      { id: 4, title: 'Zootopia', genre: 'Family' }, 
+      { id: 5, title: 'The Lion King', genre: 'Family' },
+      { id: 6, title: 'Zootopia', genre: 'Family' }, 
     ]
+  },
+
+  getters: {
+    listaComedias(){
+      return store.state.movies.filter(movie => movie.genre === "Comedy");
+
+    },
+
+    listaFamiliar(){
+      return store.state.movies.filter(movie => movie.genre === "Family");
+    }
+
   }
 })
 
